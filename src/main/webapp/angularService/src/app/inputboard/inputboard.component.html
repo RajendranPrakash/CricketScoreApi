@@ -1,0 +1,29 @@
+<div class="row">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td> Team Name: </td>
+        <!-- <td> <input [(ngModel)]="player.teamName" /> </td> -->
+        <td>
+          <select [(ngModel)]="player.teamName">
+            <option *ngFor="let team of teams" value="{{team.value}}">{{team.viewValue}}</option>
+          </select>
+        </td>
+
+        <td> Player Id: </td>
+        <td> <input [(ngModel)]="player.id" /> </td>
+      </tr>
+      <tr>
+        <td> Player Name: </td>
+        <td> <input [(ngModel)]="player.name" /> </td>
+
+        <td> Player Score: </td>
+        <td> <input [(ngModel)]="player.score" /> </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <button type="button" class="btn btn-primary btnCenter" (click)="add()">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
